@@ -1,0 +1,5 @@
+packages:
+  - "."
+
+# pnpm uses minutes. 7 days = 7 * 24 * 60 = 10080.
+minimumReleaseAge: 10080

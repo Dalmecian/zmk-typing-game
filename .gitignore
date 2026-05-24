@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vite/
+.pnpm-store/
+coverage/
+tsconfig.tsbuildinfo
+*.log
+.DS_Store
