@@ -21,14 +21,14 @@ export function GameHud({ stage, combo, accuracy, miss, adventure }: GameHudProp
   return (
     <div className="game-hud" aria-label="ステータス">
       <div className="hud-item">
-        <span>STG</span>
+        <span>Stg</span>
         <strong>{stage}</strong>
       </div>
 
       <div className="hud-sep" />
 
       <div className="hud-item">
-        <span>LV</span>
+        <span>Lv</span>
         <strong>{adventure.level}</strong>
       </div>
 
@@ -57,19 +57,19 @@ export function GameHud({ stage, combo, accuracy, miss, adventure }: GameHudProp
       <div className="hud-sep" />
 
       <div className={`hud-item hud-combo ${comboClass}`}>
-        <span>COMBO</span>
+        <span>Combo</span>
         <strong>{combo}</strong>
       </div>
 
       <div className="hud-sep" />
 
       <div className="hud-item">
-        <span>ACC</span>
+        <span>Acc</span>
         <strong>{accuracy}%</strong>
       </div>
 
       <div className={`hud-item ${miss > 0 ? "warn" : ""}`}>
-        <span>MISS</span>
+        <span>Miss</span>
         <strong>{miss}</strong>
       </div>
 
