@@ -2,9 +2,10 @@ import { PracticeSession } from "../types";
 
 type PromptLaneProps = {
   session: PracticeSession;
+  sparkle?: boolean;
 };
 
-export function PromptLane({ session }: PromptLaneProps) {
+export function PromptLane({ session, sparkle }: PromptLaneProps) {
   const typed = session.typed;
   const remaining = session.target.slice(typed.length);
   const current = remaining[0] ?? "";
@@ -17,7 +18,7 @@ export function PromptLane({ session }: PromptLaneProps) {
       {session.item.reading && session.item.reading !== session.item.display && <p className="reading">{session.item.reading}</p>}
       <div className="romaji-track" aria-label="入力進捗">
         <span className="romaji-typed">{typed}</span>
-        {current && <span className="romaji-current">{current}</span>}
+        {current && <span className={`romaji-current${sparkle ? " sparkle" : ""}`}>{current}</span>}
         <span className="romaji-rest">{rest}</span>
       </div>
     </section>

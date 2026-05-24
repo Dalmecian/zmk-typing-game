@@ -79,3 +79,14 @@ export type PracticeSession = {
   bestStreak: number;
   mistakes: MistakeEvent[];
 };
+
+export type StatusAilment = "poison" | "confusion" | "slow" | null;
+
+export type AdventureState = {
+  hp: number;
+  maxHp: number;
+  xp: number;
+  level: number;
+  ailment: StatusAilment;
+  consecutiveMisses: number;
+};
